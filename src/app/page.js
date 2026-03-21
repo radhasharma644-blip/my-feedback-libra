@@ -18,7 +18,7 @@ const TRANSLATIONS = {
     greetings: "Greetings",
     q1: "1. How was your overall experience with the dealer?",
     q2: "2. Based on overall sales experience, how satisfied are you with your TML CV dealership?",
-    q3: "3. What was your best experience with the dealer regarding Tata Magic Express Petrol?",
+    q3: "3. What was your best experience with the dealer regarding the vehicle?",
     q4: "4. How much effort did you need to put in yourself to get a response/support from the dealership in buying the vehicle?",
     q5: "5. Please rate on a scale of 0 to 10 how likely you are to recommend Tata Motors to a friend or peer",
     q6: "6. Do you want to recommend your friends or relative who are interested in purchasing Tata vehicle?",
@@ -44,7 +44,7 @@ const TRANSLATIONS = {
     success: "We appreciate your feedback! We'll be in touch with you shortly."
   },
   hi: {
-    welcome: "टाटा मोटर्स फीडबैक सेक्शन में आपका स्वागत है",
+    welcome: "Libra Automobile फीडबैक सेक्शन में आपका स्वागत है",
     subWelcome: "हम आपकी प्रतिक्रिया को महत्व देते हैं। यह हमें बेहतर बनाने में मदद करता है।",
     langLabel: "भाषा चुनें",
     continue: "जारी रखें",
@@ -55,7 +55,7 @@ const TRANSLATIONS = {
     greetings: "नमस्ते",
     q1: "1. डीलर के साथ आपका समग्र अनुभव कैसा रहा?",
     q2: "2. समग्र बिक्री अनुभव के आधार पर, आप अपने TML CV डीलरशिप से कितने संतुष्ट हैं?",
-    q3: "3. टाटा मैजिक एक्सप्रेस पेट्रोल के संबंध में डीलर के साथ आपका सबसे अच्छा अनुभव क्या था?",
+    q3: "3. Vehicle के संबंध में डीलर के साथ आपका सबसे अच्छा अनुभव क्या था?",
     q4: "4. वाहन खरीदने में डीलरशिप से सहायता प्राप्त करने के लिए आपको कितना प्रयास करना पड़ा?",
     q5: "5. 0 से 10 के पैमाने पर रेट करें कि आप टाटा मोटर्स की सिफारिश करने की कितनी संभावना रखते हैं",
     q6: "6. क्या आप अपने दोस्तों या रिश्तेदारों की सिफारिश करना चाहते हैं?",
