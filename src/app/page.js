@@ -210,8 +210,6 @@ export default function TataFeedback() {
                 </div>
               </div>
             )}
-
-            {/* STEP 2: MOOD & STARS */}
             {step === 2 && (
               <div className="space-y-10 animate-in fade-in slide-in-from-right-4">
                 <header>
@@ -242,7 +240,6 @@ export default function TataFeedback() {
               </div>
             )}
 
-            {/* STEP 3: BEST EXPERIENCE */}
             {step === 3 && (
               <div className="space-y-6 animate-in fade-in slide-in-from-right-4">
                 <h3 className="text-xl font-bold text-slate-800 mb-6">{t.q3}</h3>
@@ -260,7 +257,6 @@ export default function TataFeedback() {
               </div>
             )}
 
-            {/* STEP 4: EFFORT & RECOMMEND SCALE */}
             {step === 4 && (
               <div className="space-y-10 animate-in fade-in slide-in-from-right-4">
                 <section>
