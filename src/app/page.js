@@ -105,13 +105,26 @@ export default function TataFeedback() {
 
   const t = TRANSLATIONS[lang];
 
-  const handleNext = () => {
-    if (step === 1 && (!formData.user_name || !formData.user_phone)) {
-      alert(lang === 'en' ? "Please fill in your details" : "कृपया अपना विवरण भरें");
-      return;
-    }
-    setStep(s => s + 1);
-  };
+ const handleNext = () => {
+  const phone = formData.user_phone;
+
+  // Validate 10-digit phone number
+  const phoneValid = /^[0-9]{10}$/.test(phone);
+
+  if (
+    step === 1 &&
+    (!formData.user_name || !phoneValid)
+  ) {
+    alert(
+      lang === "en"
+        ? "Please enter valid details (10-digit phone number)"
+        : "कृपया सही विवरण भरें (10 अंकों का मोबाइल नंबर)"
+    );
+    return;
+  }
+
+  setStep((s) => s + 1);
+};
   const handlePrev = () => setStep(s => s - 1);
 
   const toggleBest = (optIndex) => {
@@ -199,12 +212,19 @@ export default function TataFeedback() {
                   </div>
                   <div className="relative">
                     <Phone className="absolute left-4 top-4 text-slate-400" size={20}/>
-                    <input 
+                    <input
                       type="tel"
-                      className="w-full p-4 pl-12 bg-slate-50 border-2 border-transparent focus:border-indigo-100 rounded-2xl outline-none font-semibold transition-all" 
+                      className="w-full p-4 pl-12 bg-slate-50 border-2 border-transparent ..."
                       placeholder={t.phoneLabel}
                       value={formData.user_phone}
-                      onChange={e => setFormData({...formData, user_phone: e.target.value})}
+                      onChange={(e) =>
+                        setFormData({ ...formData, user_phone: e.target.value })
+                      }
+                      maxLength="10"
+                      pattern="[0-9]{10}"
+                      onInput={(e) => {
+                        e.target.value = e.target.value.replace(/[^0-9]/g, "");
+                      }}
                     />
                   </div>
                 </div>
